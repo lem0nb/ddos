@@ -1,0 +1,15 @@
+name: Ubuntu
+on:
+  watch:
+    types: started
+jobs:
+  Ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install Tool
+      run: |
+        git clone https://github.com/Ha3MrX/DDos-Attack
+        cd DDos-Attack
+        chmod +x ddos-attack.py
+    - name: SSH connection to Actions
+      uses: lem0nb/debugger-action@master
